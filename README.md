@@ -12,3 +12,6 @@ Posteriormente, se ejecuta el comando yarn start para poder correr el archivo.
 ### Back-end más Front-end
 El front corre en el puerto 3000. Para empezar la aplicación es necesario navegar sobre la carpeta del proyecto hasta la carpeta front y ejecutar los mismos comandos descritos anteriormente al navegar hasta la carpeta front del proyecto.
 
+### ¿Qué tiene de especial?
+Con respecto a la modificación especial se tiene la opción de escoger el tipo de gráfica que se desea realizar. Si una grafica de barras o de puntos. Esto se planeo a partir de la selección del usuario en el formulario mostrado en la interfaz.
+

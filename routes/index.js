@@ -7,22 +7,38 @@ const assert = require('assert');
 const url = 'mongodb://localhost:27017';
 
 // Database Name
-const dbName = 'myproject';
+const dbName = 'baseDatosGraficas';
 
 // Use connect method to connect to the server
 MongoClient.connect(url, function(err, client) {
+  if(err){ 
+    return console.error(err);
+  }
+  else{}
   assert.equal(null, err);
   console.log("Connected successfully to server");
 
   const db = client.db(dbName);
 
   client.close();
+}
 });
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
+db.collection("replicaset_mongo_client_collection").find({}, function(err, docs) {
+    if(err) return next(err);
+    docs.each(function(err, doc) {
+      if(doc) {
+        console.log(doc);
+      }
+      else {
+        res.end();
+      }
+    });
+  });
+});
 });
 
 /* Find All documents*/
